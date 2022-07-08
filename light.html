@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn {
+        padding: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: aqua;
+    }
+</style>
+
+
+<body style="background-color: black">    
+    <img id='bulb' src="off.jpg" alt="" class="center" width="330">
+    <button id="toggelbtn" class="btn">Turn On</button>
+</body>
+
+<script>
+    let btn1 = document.getElementById('toggelbtn')
+    let btn2 = document.getElementById('bulb')
+
+    btn1.addEventListener('click', toggelBulbe)
+
+    function toggelBulbe(e) {
+        if (btn1.textContent.includes('On')) {
+
+            btn2.src = "on.jpg"
+            btn1.textContent = "Turn Off"
+            
+        }
+        else {
+            btn2.src = "off.jpg"
+            btn1.textContent = "Turn On"
+        }
+
+    }
+</script>
+
+</html>
